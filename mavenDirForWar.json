@@ -1,0 +1,53 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Launch an EC2 instance",
+    "Parameters": {
+        "InstanceType": {
+            "Description": "Select one of these",
+            "Type": "String",
+            "Default": "t2.micro",
+            "AllowedValues": ["t2.micro", "t2.small", "t2.medium"]
+        },
+	    "Region": {
+	    "Description": "Select one of the region",
+	    "Type": "String",
+	    "Default":"Asia Pacific (Mumbai)",
+	    "AllowedValues": ["Asia Pacific (Mumbai)","US East (Ohio)","US East (N. Virginia)"]
+        },
+        "KeyName": {
+            "Description": "Key Pair Name",
+            "Type": "AWS::EC2::KeyPair::KeyName",
+            "Default": "chandravati-mouna"
+    }
+    },
+    "Resources": {
+        "Server": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-aa5ebdd2",
+                "InstanceType": {"Ref": "InstanceType"},
+                "KeyName": {"Ref": "KeyName"},
+                "UserData":
+                {"Fn::Base64": {"Fn::Join": ["", [
+                    "#!/bin/bash -ex\n",
+					"yum update -y\n",
+					"sudo yum install git -y \n",
+					"cd /opt \n",
+					"sudo wget https://maven.apache.org/download.cgi/apache-maven-3.5.0-bin.tar.gz -P /opt \n",
+					"sudo tar xvzf apache-maven-3.5.0-bin.tar.gz -C /opt \n",
+					"export M2_HOME=/opt/apache-tomcat-7.0.56 \n",
+					"export M2=$M2_HOME/binexport \n",
+					"export PATH=$M2:$PATH \n",
+					"sudo mkdir DirForWar \n",
+					"sudo cd DirForWar \n",
+					"sudo git clone https://github.com/spring-petclinic/spring-framework-petclinic.git \n",
+					"cd spring-framework-petclinic \n",
+					"sudo mvn package \n"
+                    ]]}
+                }
+            }
+        }
+    },
+    "Outputs": {
+    }
+}

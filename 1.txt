@@ -1,0 +1,56 @@
+ 
+106683
+
+------------28/08/17
+http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.html 
+
+http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-applications-ap-south-1.html 
+
+http://awsinaction-elb-1543477446.us-east-1.elb.amazonaws.com 
+username: shubham
+password: entersys
+
+------------
+INCIN0005482299 ITSM Ticket No. 22082017
+ithelp.global@capgemini.com
+Inamdar, Sarfraz: 
+INCIN0005482299 
+
+
+
+
+https://apexapps.oracle.com/pls/apex/f?p=44785:17:11925087264848::NO:RP:P17_PAGE_ID,P17_EVENT_ID,P17_COURSE_ID,P17_PREV_PAGE:789,5528,56,
+
+
+
+
+
+
+
+https://aws.amazon.com/blogs/apn/collecting-information-from-aws-cloudformation-resources-created-in-external-accounts-with-custom-resources/
+
+http://www.cio.com/article/3207553/certifications/the-most-valuable-cloud-computing-certifications-today.html
+
+BEGIN 
+       * First script will take an user input for the bucket name.
+       *Next it will try to check ,whether there is a bucket which has same name or not.
+       *If bucket already exists with the same name, it will give a warning.
+       *It will take "yes" as user input to overwrite the bucket.
+       *In case of "no" it will again prompt for the bucket name.
+       *In any of the cases bucket will be created.
+       *After that path will b prompted from where we want to upload the file.
+       *After giving the path , file will be uploaded successfully.
+
+https://github.com/amitme0014/scriptPractice/blob/master/amit.sh
+
+Your Request REQIN0006680589 has been submitted. (ARNOTE 45352)
+
+
+
+
+Your Request REQIN0006681205 has been submitted. (ARNOTE 45352)
+
+
+
+
+Your Request REQIN0006681505 has been submitted. (ARNOTE 45352)

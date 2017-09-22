@@ -1,0 +1,43 @@
+------------------09082017
+1. sudo su -
+2. yum update
+3. wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo 
+4. rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org 
+5. yum install jenkins
+6. service jenkins start 
+7. chkconfig jenkins on 
+8. Open your browser and navigate to http://<public DNS name or public IP of your VM>:8080 
+
+To remove
+sudo yum remove java-1.7.0-openjdk
+Java Installation
+1. sudo yum update 
+2.sudo yum install java-1.8.0
+
+change Java version
+sudo update-alternatives --config java
+
+View the password for the AWS EC2 Instance Jenkins (GitHub Plugin)
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+sudo apt-get install curl 
+to install curl inside a container
+
+----------------------10082017
+
+2.1 sudo yum install docker
+2.2 sudo service docker status
+2.3 sudo service docker start 
+2.4 sudo docker -help 
+2.5 sudo docker images 
+2.6 sudo docker run  -i -t hello-world
+
+cat /etc/passwd 
+you can see which you created user bottom of the file
+
+ps -ex|grep docker 
+you can get the docker PID
+
+ docker commit 168a43ef878d user1/curl:1.0
+sha256:29ee537ad3020d74999136fad03776c6a9a6b8a4cb070224374d9503c571ec10
+

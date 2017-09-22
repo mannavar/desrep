@@ -1,0 +1,37 @@
+https://docs.sonarqube.org/display/SONAR/Architecture+and+Integration
+---------
+https://tecadmin.net/what-is-inode-number-in-linux/
+
+
+
+#what would you do when you want to check errors of some services or applications. I think its checking log files.
+
+#how do you check the processes and filter out a process from the list of processes 
+
+#environment variables in linux.
+
+#some questions on usage of grep command.
+
+#sed command
+
+#^workspace clearing in jenkins job
+
+#building a job in jenkins
+
+#configuring git in jenkins
+
+#how will you zip multiple files in linux
+https://www.tecmint.com/18-tar-command-examples-in-linux/
+https://www.computerhope.com/unix/utar.htm
+
+#log files are in which folder
+
+#yum install
+
+#restart a service in linux
+
+#how will you install a service/ package using the yum in linux.
+https://superuser.com/questions/125933/what-is-the-difference-between-yum-apt-get-rpm-configure-make-install
+
+#soft link
+https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/

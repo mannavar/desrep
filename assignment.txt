@@ -1,0 +1,49 @@
+to install the maven on AWS EC2 instance
+
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+mvn --version
+
+
+
+
+
+
+
+
+https://gist.github.com/sebsto/19b99f1fa1f32cae5d00
+
+http://www.vogella.com/tutorials/ApacheMaven/article.html
+
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+
+https://stackoverflow.com/questions/24705877/cant-get-maven-to-recognize-java-1-8
+
+----------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 20.111 s
+[INFO] Finished at: 2017-09-19T14:36:12+00:00
+[INFO] Final Memory: 24M/57M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:1.5.4.RELEASE:build-info (default) on project spring-petclinic: /home/ec2-user/spclinic_1/spring-petclinic/target/classes/META-INF/build-info.properties (Permission denied) -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+
+
+--------------------------
+#!/bin/bash -ex
+yum update -y
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+export PATH=$PATH:/etc/yum.repos.d
+sudo yum install apache-maven -y
+git clone https://github.com/spring-petclinic/spring-framework-petclinic.git
+mvn package
